@@ -85,7 +85,6 @@ void get_tzone () {
 		
 #if defined(PBL_SDK_3)
 	clock_get_timezone(s_region_string, TIMEZONE_NAME_LENGTH);
-
 #else
     snprintf(s_region_string, sizeof(s_region_string), "World Timezone N/A");
 #endif
@@ -126,27 +125,6 @@ static void sync_tuple_changed_callback(const uint32_t key,
     break;
   }
 }
-
-/*
-void bluetooth_connection_changed(bool connected) {
-  static bool _connected = true;
-
-  // This seemed to get called twice on disconnect
-  if (!connected && _connected) {
-    vibes_short_pulse();
-    layer_set_hidden(text_layer_get_layer(temp_layer), true);
-
-    if (icon_bitmap) {
-      gbitmap_destroy(icon_bitmap);
-    }
-
-    icon_bitmap = gbitmap_create_with_resource(RESOURCE_ID_NO_BT);
-    bitmap_layer_set_bitmap(icon_layer, icon_bitmap);
-  }
-  _connected = connected;
-}
-
-*/
 
 static void toggle_bluetooth(bool connected) {
 
@@ -314,15 +292,11 @@ void handle_init(void) {
   layer_conn_img  = bitmap_layer_create(GRect(126, 155, 10, 13));
 #endif	
   bitmap_layer_set_bitmap(layer_conn_img, img_bt_connect);
-  layer_add_child(window_layer, bitmap_layer_get_layer(layer_conn_img)); 
-	
+  layer_add_child(window_layer, bitmap_layer_get_layer(layer_conn_img)); 	
 	
 
   // Setup weather info
 	
-//  Layer *weather_holder = layer_create(GRect(0, 0, 144, 50));
-//  layer_add_child(window_layer, weather_holder);
-
 #ifdef PBL_PLATFORM_CHALK
   icon_layer = bitmap_layer_create(GRect(0, 0, 180, 44));
 #else
@@ -343,6 +317,7 @@ void handle_init(void) {
   text_layer_set_font(temp_layer, custom_font_date);
   layer_add_child(window_layer, text_layer_get_layer(temp_layer));
 
+	
   // Initialize date & time text
 
 #ifdef PBL_PLATFORM_CHALK
@@ -369,6 +344,7 @@ void handle_init(void) {
   text_layer_set_text_alignment(text_time_layer, GTextAlignmentCenter);
   layer_add_child(window_layer, text_layer_get_layer(text_time_layer));
 
+	
 // battery text
 	
 #ifdef PBL_PLATFORM_CHALK
@@ -382,6 +358,7 @@ void handle_init(void) {
   text_layer_set_text_alignment(battery_text_layer, GTextAlignmentRight);
   layer_add_child(window_layer, text_layer_get_layer(battery_text_layer));
 
+	
   // timezone text
 	
 #ifdef PBL_PLATFORM_CHALK
