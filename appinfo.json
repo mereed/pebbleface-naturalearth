@@ -1,0 +1,144 @@
+{
+    "appKeys": {
+        "bluetoothvibe": 2,
+        "hourlyvibe": 3,
+        "icon": 0,
+        "temperature": 1
+    },
+    "capabilities": [
+        "configurable"
+    ],
+    "companyName": "chops",
+    "longName": "Natural Earth",
+    "projectType": "native",
+    "resources": {
+        "media": [
+            {
+                "file": "images/bluetoothoff.png",
+                "name": "IMAGE_BT_OFF",
+                "type": "png"
+            },
+            {
+                "file": "images/ne-bt-on.png",
+                "name": "IMAGE_BT_ON",
+                "type": "png"
+            },
+            {
+                "file": "images/menu_icon.png",
+                "menuIcon": true,
+                "name": "IMAGE_MENU_ICON",
+                "type": "png"
+            },
+            {
+                "file": "images/9.png",
+                "name": "PARTLY_CLOUDY_NIGHT",
+                "type": "png"
+            },
+            {
+                "file": "images/nightmap.png",
+                "name": "IMAGE_BACKGROUND2",
+                "type": "png"
+            },
+            {
+                "file": "images/daymap.png",
+                "name": "IMAGE_BACKGROUND1",
+                "type": "png"
+            },
+            {
+                "characterRegex": "[0-9:]",
+                "file": "fonts/HelveticaNeue-Thin.otf",
+                "name": "FONT_CUSTOM_48",
+                "type": "font"
+            },
+            {
+                "file": "fonts/HelveticaNeue-Thin.otf",
+                "name": "FONT_CUSTOM_12",
+                "trackingAdjust": 1,
+                "type": "font"
+            },
+            {
+                "file": "fonts/HelveticaNeue-Thin.otf",
+                "name": "FONT_CUSTOM_14",
+                "trackingAdjust": 1,
+                "type": "font"
+            },
+            {
+                "file": "images/2.png",
+                "name": "CLEAR_DAY",
+                "type": "png"
+            },
+            {
+                "file": "images/3.png",
+                "name": "CLEAR_NIGHT",
+                "type": "png"
+            },
+            {
+                "file": "images/6.png",
+                "name": "WINDY",
+                "type": "png"
+            },
+            {
+                "file": "images/7.png",
+                "name": "COLD",
+                "type": "png"
+            },
+            {
+                "file": "images/8.png",
+                "name": "PARTLY_CLOUDY_DAY",
+                "type": "png"
+            },
+            {
+                "file": "images/13.png",
+                "name": "HAZE",
+                "type": "png"
+            },
+            {
+                "file": "images/14.png",
+                "name": "CLOUD",
+                "type": "png"
+            },
+            {
+                "file": "images/18.png",
+                "name": "RAIN",
+                "type": "png"
+            },
+            {
+                "file": "images/23.png",
+                "name": "SNOW",
+                "type": "png"
+            },
+            {
+                "file": "images/24.png",
+                "name": "HAIL",
+                "type": "png"
+            },
+            {
+                "file": "images/25.png",
+                "name": "CLOUDY",
+                "type": "png"
+            },
+            {
+                "file": "images/27.png",
+                "name": "STORM",
+                "type": "png"
+            },
+            {
+                "file": "images/45.png",
+                "name": "NA",
+                "type": "png"
+            }
+        ]
+    },
+    "sdkVersion": "3",
+    "shortName": "Natural Earth",
+    "targetPlatforms": [
+        "aplite",
+        "basalt",
+        "chalk"
+    ],
+    "uuid": "bc00e37e-e039-4e65-b5ab-62a1339adfca",
+    "versionLabel": "1.0",
+    "watchapp": {
+        "watchface": true
+    }
+}
